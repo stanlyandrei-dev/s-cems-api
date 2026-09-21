@@ -103,11 +103,13 @@ Users can create and manage comments associated with posts.
 | PATCH | `/comments/:id` | Update a comment |
 | DELETE | `/comments/:id` | Delete a comment |
 
+The API contains 20 REST endpoints covering authentication, users, posts, and comments.
+
 ## Database
 
 The system uses MySQL as its database and TypeORM as the ORM.
 
-The main database entities are:
+### Main Entities
 
 - Users
 - Posts
@@ -118,8 +120,8 @@ The main database entities are:
 - One user can have many posts.
 - One user can have many comments.
 - One post can have many comments.
-- Posts belong to a user.
-- Comments belong to a user and a post.
+- Each post belongs to a user.
+- Each comment belongs to a user and a post.
 
 ## Authentication and Security
 
@@ -135,7 +137,8 @@ Sensitive configuration values such as database credentials and JWT secrets are 
 
 ## Installation
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/stanlyandrei-dev/s-cems-api.git
+cd s-cems-api
